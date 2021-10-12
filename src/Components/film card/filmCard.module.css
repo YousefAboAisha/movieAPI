@@ -1,0 +1,120 @@
+.card {
+  position: relative;
+  width: 300px;
+  min-height: 574px;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 10px;
+  background: #fff;
+}
+
+.card img {
+  height: auto;
+  width: 100%;
+  color: rgb(122, 122, 122);
+  font-size: 13px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card .text h5 {
+  font-size: 15px;
+  color: var(--darkBackground);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card .text p {
+  font-size: 14px;
+  color: rgb(94, 94, 94);
+  height: 100px;
+  overflow-y: scroll;
+}
+
+.card .text p span {
+  color: var(--mainColor);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card .rate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: #f1c40f;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border-top-left-radius: 7px;
+}
+
+.card .rate span {
+  font-size: 15px;
+  padding: 5px;
+  color: #111;
+  font-weight: 600;
+}
+
+.card button {
+  padding: 7px;
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  backdrop-filter: blur(0px) saturate(180%);
+  -webkit-backdrop-filter: blur(0px) saturate(180%);
+  background-color: rgba(7, 158, 1, 0.932);
+  border-radius: 50%;
+  border-top-right-radius: 7px;
+}
+
+.card button:disabled {
+  display: none;
+}
+
+.card2 {
+  position: relative;
+  height: auto;
+  width: auto;
+}
+
+.card2 img {
+  box-shadow: 1px 1px 20px rgb(26, 26, 26);
+  transition: all 0.4s linear;
+  cursor: pointer;
+}
+
+.card2 .btns {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.card2 .btns button {
+  outline: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 17px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  color: var(--mainColor);
+  transition: all 0.3s linear;
+  box-shadow: 2px 2px 10px #222222;
+}
+
+.card2 .btns button:hover {
+  background-color: rgba(255, 255, 255);
+}

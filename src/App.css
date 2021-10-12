@@ -1,38 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body[data-theme="light"] {
+  --whiteBackground: rgba(255, 255, 255, 0.99);
+  --darkBackground: #0c0f21;
+  --mainColor: #d35400;
+  --black: #111;
+}
+
+body[data-theme="dark"] {
+  --whiteBackground: rgba(34, 34, 34, 0.99);
+  --darkBackground: #130f40;
+  --mainColor: #d35400;
+  --black: #111;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.App .middle {
+  position: relative;
+  flex: 3;
+  margin-left: 350px;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 91px;
+  background-color: var(--darkBackground);
+  overflow-x: hidden;
+  min-height: 800px;
 }
 
-.App-link {
-  color: #61dafb;
+.App .left {
+  position: relative;
+  padding: 15px;
+  flex: 1;
+  background-image: repeating-linear-gradient(
+      90deg,
+      hsla(298, 16%, 68%, 0.06) 0px,
+      hsla(298, 16%, 68%, 0.06) 1px,
+      transparent 1px,
+      transparent 21px,
+      hsla(298, 16%, 68%, 0.06) 21px,
+      hsla(298, 16%, 68%, 0.06) 22px,
+      transparent 22px,
+      transparent 72px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      hsla(298, 16%, 68%, 0.06) 0px,
+      hsla(298, 16%, 68%, 0.06) 1px,
+      transparent 1px,
+      transparent 21px,
+      hsla(298, 16%, 68%, 0.06) 21px,
+      hsla(298, 16%, 68%, 0.06) 22px,
+      transparent 22px,
+      transparent 72px
+    ),
+    repeating-linear-gradient(
+      135deg,
+      hsla(298, 16%, 68%, 0.06) 0px,
+      hsla(298, 16%, 68%, 0.06) 1px,
+      transparent 1px,
+      transparent 21px,
+      hsla(298, 16%, 68%, 0.06) 21px,
+      hsla(298, 16%, 68%, 0.06) 22px,
+      transparent 22px,
+      transparent 72px
+    ),
+    linear-gradient(90deg, hsl(275, 3%, 97%), hsl(275, 3%, 97%));
+  position: fixed;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App .left {
+  justify-self: flex-start;
+  left: 0;
+  width: 350px;
+  flex: 2;
+  overflow-y: scroll;
+  padding-bottom: 100px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .App .left {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App .middle {
+    margin-left: 0;
+    transition: all 0.4s linear;
   }
 }

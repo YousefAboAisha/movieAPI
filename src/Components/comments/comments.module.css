@@ -1,0 +1,71 @@
+.box {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  height: auto;
+}
+
+.heading {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.box textarea {
+  padding: 7px;
+  padding-left: 12px;
+  padding-top: 10px;
+  outline: none;
+  width: 100%;
+  border: none;
+  border: 2px solid rgba(221, 221, 221, 0.7);
+  resize: none;
+  margin-top: 10px;
+  font-size: 15px;
+  transition: all 0.2s linear;
+}
+
+.box textarea:focus {
+  border: 2px solid var(--mainColor);
+  transition: all 0.4s linear;
+}
+
+.box .btn {
+  margin: 5px 0;
+  padding: 10px 0;
+}
+
+.box .btn button {
+  margin-right: 10px;
+  padding: 7px 25px;
+  outline: none;
+  width: fit-content;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--mainColor);
+  font-weight: 600;
+  box-shadow: 1px 1px 5px rgba(119, 118, 118, 0.473),
+    -1px -1px 5px rgba(121, 119, 119, 0.562);
+  user-select: none;
+  transition: all 0.3s linear;
+  font-size: 14px;
+}
+
+.box .btn button:nth-of-type(2) {
+  background: none;
+  box-shadow: 2px 2px 3px rgba(202, 202, 202, 0.459),
+    -2px -2px 5px rgba(201, 201, 201, 0.555);
+}
+
+.box .btn button:disabled {
+  transform: scale(0.95);
+  opacity: 0.95;
+  transition: all 0.5s linear;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 850px) {
+  .box {
+    width: 100%;
+  }
+}

@@ -1,0 +1,28 @@
+.nav {
+  background-color: var(--whiteBackground);
+  box-shadow: 1px 1px 10px rgb(36, 36, 36);
+  padding: 15px 0;
+}
+
+.nav a {
+  padding: 12px;
+  margin: 0 8px;
+  min-width: fit-content;
+  width: 100px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.4s ease-in-out;
+  color: var(--darkBackground) !important;
+}
+
+.active {
+  background-color: var(--mainColor);
+  transition: all 0.4s ease-in-out;
+}
+
+a.brand {
+  font-family: "Suez One", serif;
+  font-size: 25px;
+  font-weight: 500;
+}

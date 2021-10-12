@@ -1,0 +1,32 @@
+.favourite {
+  position: relative;
+  color: var(--whiteBackground);
+  padding: 20px;
+}
+
+.favourite .cards {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding: 10px;
+  gap: 20px;
+}
+
+.favourite h2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.favourite h2 span {
+  font-size: 17px;
+  margin-left: 15px;
+  background-color: var(--mainColor);
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.favourite .cards h4 {
+  margin-top: 50px;
+}

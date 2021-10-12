@@ -1,0 +1,29 @@
+.layout {
+  position: relative;
+  margin-top: 91px;
+  color: var(--whiteBackground);
+  display: flex;
+  justify-content: center;
+  height: 1400px;
+}
+
+.layout .left {
+  flex: 1;
+  background-color: #fff;
+}
+
+.layout .middle {
+  flex: 3.5;
+}
+
+.layout .right {
+  flex: 1;
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 760px) {
+  .layout .left,
+  .layout .right {
+    display: none;
+  }
+}
